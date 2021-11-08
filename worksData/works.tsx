@@ -113,6 +113,42 @@ const worksData = [
     isPickedUp: false
   },
   {
+    title: "カサイテントウのワンポイントTシャツ",
+    descriptionShort: "珍しい、かっこいい、大きいという、珍・美・大を兼ね備えたカサイテントウの模様を抜き出してデザインしました。北海道の一部にしか分布せず、五葉松の仲間につくアブラムシを食べます。日本で似た模様のテントウはおらず、特別感の強い、作者も憧れの種です。",
+    descriptionLong: "珍しい、かっこいい、大きいという、珍・美・大を兼ね備えたカサイテントウの模様を抜き出してデザインしました。北海道の一部にしか分布せず、五葉松の仲間につくアブラムシを食べます。日本で似た模様のテントウはおらず、特別感の強い、作者も憧れの種です。",
+    imageUrl: [
+      "kasaitshirtsmallscale.png"
+    ],
+    shopLink: "https://suzuri.jp/Tentouya/8688848/t-shirt/m/white",
+    detailLink: "/works/kasai-tshirt-smallscale",
+    ogpUrl: "",
+    isPickedUp: true
+  },
+  {
+    title: "アミダテントウのワンポイントTシャツ",
+    descriptionShort: "アミダテントウAmida tricolor (Harold, 1878)の模様のTシャツです。",
+    descriptionLong: "アミダテントウAmida tricolor (Harold, 1878)の模様のTシャツです。",
+    imageUrl: [
+      "amidatshirtsmallscale.png"
+    ],
+    shopLink: "https://suzuri.jp/Tentouya/8688820/t-shirt/m/white",
+    detailLink: "/works/amida-tshirt-smallscale",
+    ogpUrl: "",
+    isPickedUp: true
+  },
+  {
+    title: "ジュウサンホシテントウのワンポイントTシャツ",
+    descriptionShort: "上翅に13個の紋がある、湿地性の種です。テントウムシらしからぬ細長い体型が一部の層に人気です。ヨシなどの植物の隙間に入れるように、このような薄く細長い体になったのかもしれません。",
+    descriptionLong: "上翅に13個の紋がある、湿地性の種です。テントウムシらしからぬ細長い体型が一部の層に人気です。ヨシなどの植物の隙間に入れるように、このような薄く細長い体になったのかもしれません。",
+    imageUrl: [
+      "jyuusannhoshitshirtsmallscale.png"
+    ],
+    shopLink: "https://suzuri.jp/Tentouya/8688859/t-shirt/m/white",
+    detailLink: "/works/jyuusannhoshi-tshirt-smallscale",
+    ogpUrl: "",
+    isPickedUp: true
+  },
+  {
     title: "タテスジヒメジンガサハムシのスマホケース",
     descriptionShort: "日本で最も美しいカメノコハムシ類とも言える、タテスジヒメジンガサハムシのスマホケースです。クリアケースで翅の透明感を表現しました。",
     descriptionLong: "https://suzuri.jp/Tentouya/6006661/soft-clear-smartphone-case/iphone12-mini/clear",
