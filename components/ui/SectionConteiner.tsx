@@ -12,7 +12,7 @@ const SectionContainer: React.FC<Props> = (props) => {
 }
 
 const containerStyle = css`
-  margin: 20px auto;
+  margin: 15px auto;
   padding: 0 20px;
   text-align: center;
   max-width: 1000px;

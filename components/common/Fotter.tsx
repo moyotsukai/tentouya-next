@@ -8,7 +8,7 @@ const Fotter: React.FC = () => {
 }
 
 const footerStyle = css`
-  padding: 4px 0;
+  padding: 8px 0;
   font-size: 10pt;
   text-align: center;
   color: rgb(100, 100, 100);

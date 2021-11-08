@@ -6,12 +6,14 @@ import logoImg from '../../public/images/logo/tentouya_logo.png'
 import { primaryShadowColor } from '../../styles/colors'
 
 const Header: React.FC = () => {
+  const imageSize = 50
+
   return (
     <header css={headerStyle}>
       <Link href="/">
         <a css={linkStyle}>
-          <div css={imageContainer}>
-            <Image src={logoImg} layout="responsive" css={imgStyle} />
+          <div css={() => (imageContainer)}>
+            <Image src={logoImg} width={imageSize} height={imageSize} css={imgStyle} />
           </div>
           <span css={textStyle}>てんとうや</span>
         </a>
@@ -21,7 +23,7 @@ const Header: React.FC = () => {
 }
 
 const headerStyle = css`
-  padding: 10px 20px;
+  padding: 2px 5px;
   background-color: #fff;
   border-bottom: 1px solid #dcdcdc;
   box-shadow: 0 2px 5px 0 ${primaryShadowColor};
@@ -37,9 +39,9 @@ const linkStyle = css`
     cursor: pointer;
   }
 `
-const imageContainer = css`
-  width: 50px;
-  height: 50px;
+const imageContainer = (imageSize) => css`
+  width: ${imageSize}px;
+  height: ${imageSize}px;
   display: inline-block;
   vertical-align: middle;
 `

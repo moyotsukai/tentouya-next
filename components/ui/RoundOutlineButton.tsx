@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Link from 'next/link'
-import { primaryColor } from '../../styles/colors'
+import { secondarySelectedColor } from '../../styles/colors'
 
 type Props = {
   isOuterLink: boolean,
@@ -31,12 +31,18 @@ const RoundOutlineButton: React.FC<Props> = (props) => {
 const buttonStyle = css`
   display: inline-block;
   margin: 10px;
-  padding: 10px 15px;
+  padding: 9px 15px;
   border-radius: 200px;
+  font-weight: 500;
   text-align: center;
   border: solid 2px #000;
   color: #000;
   font-size: 11pt;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${secondarySelectedColor};
+  }
 `
 
 export default RoundOutlineButton

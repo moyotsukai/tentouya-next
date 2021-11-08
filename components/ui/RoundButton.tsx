@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Link from 'next/link'
-import { primaryColor } from '../../styles/colors'
+import { primaryColor, primarySelectedColor } from '../../styles/colors'
 
 type Props = {
   isOuterLink: boolean,
@@ -31,12 +31,17 @@ const RoundButton: React.FC<Props> = (props) => {
 const buttonStyle = css`
   display: inline-block;
   margin: 10px;
-  padding: 10px 15px;
+  padding: 9px 15px;
   border-radius: 200px;
   text-align: center;
   background-color: ${primaryColor};
   color: #fff;
   font-size: 11pt;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${primarySelectedColor};
+  }
 `
 
 export default RoundButton

@@ -1,16 +1,29 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import TopMessage from '../divided/TopMessaeg'
+import TopNews from '../divided/TopNews'
 import TopWorks from '../divided/TopWorks'
 import Spacer from '../ui/Spacer'
+import TopFukuwarai from '../divided/TopFukuwarai'
 
 const IndexPage: React.FC = () => {
+  const hasNews = true
+
   return (
     <div css={layoutStyle}>
-      <Spacer y={10} />
+      <Spacer y={22} />
       <TopMessage />
-      <Spacer y={5} />
+      <Spacer y={1} />
+
+      {hasNews &&
+        < TopNews />
+      }
+
+      <Spacer y={8} />
       <TopWorks />
+
+      <Spacer y={8} />
+      <TopFukuwarai />
     </div>
   )
 }

@@ -15,7 +15,7 @@ const Spacer: React.FC<Props> = (props) => {
   )
 }
 
-const layoutStyle = (x, y) => css`
+const layoutStyle = (x: number, y: number) => css`
   width: ${x}px;
   height: ${y}px;
 `
