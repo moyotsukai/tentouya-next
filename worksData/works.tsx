@@ -1,4 +1,6 @@
-const worksData = [
+import { Work } from "../types/Work.type"
+
+const worksData: Work[] = [
   {
     title: "テントウトランプ",
     descriptionShort: "日本には現在約190種のテントウムシがいます。その中から、トランプの数字に対応する模様を持った36種を選び、リアルなイラストに仕上げました。体型・触角・眼・脚など、各部位の形状にもこだわった超マニアックな一品です！",
@@ -11,6 +13,7 @@ const worksData = [
     ],
     shopLink: "https://tentouya.base.shop/items/43945825",
     detailLink: "/works/tentou-playing-cards",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: true
   },
@@ -24,6 +27,7 @@ const worksData = [
     ],
     shopLink: "https://tentouya.base.shop/items/49277227",
     detailLink: "/works/horseshoecrab-papercraft",
+    youTubeLink: "https://www.youtube.com/embed/ItWuONxWQu4",
     ogpUrl: "",
     isPickedUp: true
   },
@@ -37,6 +41,7 @@ const worksData = [
     ],
     shopLink: "https://tentouya.base.shop/items/51778458",
     detailLink: "/works/maimaikaburi-papercraft",
+    youTubeLink: "https://www.youtube.com/embed/1m7rtRYI7YI",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -49,6 +54,7 @@ const worksData = [
     ],
     shopLink: "https://tentouya.base.shop/items/36443218",
     detailLink: "/works/kamenokotentou-papercraft",
+    youTubeLink: "https://www.youtube.com/embed/esBwF8qbMOo",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -61,6 +67,7 @@ const worksData = [
     ],
     shopLink: "https://tentouya.base.shop/items/36377473",
     detailLink: "/works/tentou-postcard-1",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: true
   },
@@ -73,6 +80,7 @@ const worksData = [
     ],
     shopLink: "https://tentouya.base.shop/items/39383383",
     detailLink: "/works/tentou-postcard-2",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -85,6 +93,7 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/7196837/t-shirt/m/black",
     detailLink: "/works/kasai-tshirt",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: true
   },
@@ -97,6 +106,7 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/4661673/t-shirt/m/californiaorange",
     detailLink: "/works/amida-tshirt",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -109,6 +119,7 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/4834232/t-shirt/m/white",
     detailLink: "/works/yahoshi-tshirt",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -121,8 +132,9 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/8688848/t-shirt/m/white",
     detailLink: "/works/kasai-tshirt-smallscale",
+    youTubeLink: "",
     ogpUrl: "",
-    isPickedUp: true
+    isPickedUp: false
   },
   {
     title: "アミダテントウのワンポイントTシャツ",
@@ -133,8 +145,9 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/8688820/t-shirt/m/white",
     detailLink: "/works/amida-tshirt-smallscale",
+    youTubeLink: "",
     ogpUrl: "",
-    isPickedUp: true
+    isPickedUp: false
   },
   {
     title: "ジュウサンホシテントウのワンポイントTシャツ",
@@ -145,8 +158,9 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/8688859/t-shirt/m/white",
     detailLink: "/works/jyuusannhoshi-tshirt-smallscale",
+    youTubeLink: "",
     ogpUrl: "",
-    isPickedUp: true
+    isPickedUp: false
   },
   {
     title: "タテスジヒメジンガサハムシのスマホケース",
@@ -157,6 +171,7 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/6006661/soft-clear-smartphone-case/iphone12-mini/clear",
     detailLink: "/works/phone-case-tatesujihimejinngasahamushi",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -169,6 +184,7 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/6006661/soft-clear-smartphone-case/iphone12-mini/clear",
     detailLink: "/works/phone-case-tatesujihimejinngasahamushi",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: false
   },
@@ -181,6 +197,7 @@ const worksData = [
     ],
     shopLink: "https://suzuri.jp/Tentouya/7245981/bandana/m/white",
     detailLink: "/works/beating-net-bandana",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: false
   }

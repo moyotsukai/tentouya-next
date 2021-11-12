@@ -14,7 +14,7 @@ const Title: React.FC<Props> = (props) => {
 const textStyle = css`
   font-size: 20pt;
   font-weight: 700;
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 0 10px;
   text-align: center;
 `

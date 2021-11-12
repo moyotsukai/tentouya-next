@@ -30,7 +30,7 @@ const RoundButton: React.FC<Props> = (props) => {
 
 const buttonStyle = css`
   display: inline-block;
-  margin: 10px;
+  margin: 5px 10px;
   padding: 9px 15px;
   border-radius: 200px;
   text-align: center;

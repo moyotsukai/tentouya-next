@@ -1,19 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/react'
+import { Work } from '../../types/Work.type'
 import Image from 'next/image'
 import RoundOutlineButton from '../ui/RoundOutlineButton'
 import RoundButton from '../ui/RoundButton'
 
 type Props = {
-  data: {
-    title: string,
-    descriptionShort: string,
-    descriptionLong: string,
-    imageUrl: string[],
-    shopLink: string,
-    detailLink: string,
-    ogpUrl: string
-  },
+  data: Work,
   isWorksStyle: boolean
 }
 
@@ -34,7 +27,7 @@ const TopCard: React.FC<Props> = (props) => {
   return (
     <div css={cardStyle}>
       <div css={imageContainerStyle}>
-        <Image src={`/images/thumbnails/${props.data.imageUrl[0]}`} width={600} height={400} layout="intrinsic" objectFit="cover" />
+        <Image src={`/images/thumbnails/${props.data.imageUrl[0]}`} width={600} height={400} layout="responsive" objectFit="cover" />
       </div>
       <div css={textBoxStyle}>
         <p css={titleStyle}>{props.data.title}</p>

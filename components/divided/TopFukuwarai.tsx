@@ -14,6 +14,7 @@ const TopFukuwarai: React.FC = () => {
     ],
     shopLink: "/tentoufukuwarai",
     detailLink: "",
+    youTubeLink: "",
     ogpUrl: "",
     isPickedUp: true
   }

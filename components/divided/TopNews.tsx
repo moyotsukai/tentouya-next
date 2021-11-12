@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import SectionContainer from '../ui/SectionConteiner'
+import { cautionColor } from '../../styles/colors'
 
 const TopNews: React.FC = () => {
   return (
@@ -15,12 +16,12 @@ const TopNews: React.FC = () => {
 }
 
 const newsStyle = css`
-  display: inline-block;
-  margin: 0 auto;
-  padding: 10px 15px;
+  width: 100%;
   max-width: 1000px;
-  background-color: #fff0c8;
+  padding: 10px 15px;
+  background-color: ${cautionColor};
   border-radius: 6px;
+  text-align: center;
 `
 
 const textStyle = css`

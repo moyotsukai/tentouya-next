@@ -11,18 +11,21 @@ const IndexPage: React.FC = () => {
 
   return (
     <div css={layoutStyle}>
-      <Spacer y={22} />
+      <Spacer y={30} />
       <TopMessage />
       <Spacer y={1} />
 
       {hasNews &&
-        < TopNews />
+        <React.Fragment>
+          <Spacer y={25} />
+          < TopNews />
+        </React.Fragment>
       }
 
-      <Spacer y={8} />
+      <Spacer y={35} />
       <TopWorks />
 
-      <Spacer y={8} />
+      <Spacer y={35} />
       <TopFukuwarai />
     </div>
   )
