@@ -6,7 +6,7 @@ type Props = {
   y?: number
 }
 
-const Spacer: React.FC<Props> = (props) => {
+const SpacerInline: React.FC<Props> = (props) => {
   const x = props.x ? props.x : 0
   const y = props.y ? props.y : 0
 
@@ -16,9 +16,8 @@ const Spacer: React.FC<Props> = (props) => {
 }
 
 const layoutStyle = (x: number, y: number) => css`
-  display: block;
-  width: ${x}px;
-  height: ${y}px;
+  display: inline;
+  margin: ${y}px ${x}px;
 `
 
-export default Spacer
+export default SpacerInline

@@ -4,7 +4,7 @@ const worksData: Work[] = [
   {
     id: "tentou-playing-cards",
     title: "テントウトランプ",
-    descriptionShort: "日本には現在約190種のテントウムシがいます。その中から、トランプの数字に対応する模様を持った36種を選び、リアルなイラストに仕上げました。体型・触角・眼・脚など、各部位の形状にもこだわった超マニアックな一品です！",
+    descriptionShort: "日本には現在約190種のテントウムシがいます。その中から、トランプの数字に対応する模様を持った36種を選び、リアルなイラストに仕上げました。",
     descriptionLong: "日本には現在約190種のテントウムシがいます。その中から、トランプの数字に対応する模様を持った36種を選び、リアルなイラストに仕上げました。それぞれの種類の体型・触角・眼・脚など、各部位の形状にもこだわった、超マニアックな一品です！",
     imageUrl: [
       "tentoucards_1.jpg",
@@ -34,7 +34,7 @@ const worksData: Work[] = [
   {
     id: "maimaikaburi-papercraft",
     title: "マイマイカブリのペーパークラフト",
-    descriptionShort: "マイマイカブリ基亜種（ホンマイ）のペーパークラフトです。",
+    descriptionShort: "マイマイカブリ基亜種（ホンマイ）のペーパークラフトです。ぜひ紙で立体作品を作る楽しさを見つけてみてください！",
     descriptionLong: "マイマイカブリ基亜種（ホンマイ）のペーパークラフトです。曲線に沿って折ることで立体感を表現しています。ご購入いただくと、PDFファイルの展開図がダウンロードできます。ぜひ紙で立体作品を作る楽しさを見つけてみてください！",
     imageUrl: [
       "maimaikaburi_1.jpg",
@@ -51,7 +51,8 @@ const worksData: Work[] = [
     descriptionShort: "日本最大級のテントウムシ、カメノコテントウ。細かいパーツまでリアルに作りました。切り込みを模様に重ね、継ぎ目の見えない構造になっています。",
     descriptionLong: "日本最大級のテントウムシ、カメノコテントウ。細かいパーツまでリアルに作りました。切り込みを模様に重ね、継ぎ目の見えない構造になっています。ご購入いただくと、PDFファイルの展開図がダウンロードできます。ぜひ手のひらサイズのカメノコテントウを作ってみてください!",
     imageUrl: [
-      "kamenoko_img.jpg"
+      "kamenoko_1.jpg",
+      "kamenoko_2.jpg"
     ],
     shopLink: "https://tentouya.base.shop/items/36443218",
     youTubeLink: "https://www.youtube.com/embed/esBwF8qbMOo",
@@ -87,7 +88,7 @@ const worksData: Work[] = [
   {
     id: "kasai-tshirt",
     title: "カサイテントウのTシャツ",
-    descriptionShort: "珍しい、かっこいい、大きいという、珍・美・大を兼ね備えたカサイテントウの模様を抜き出してデザインしました。北海道の一部にしか分布せず、五葉松の仲間につくアブラムシを食べます。日本で似た模様のテントウはおらず、特別感の強い、作者も憧れの種です。",
+    descriptionShort: "珍しい、かっこいい、大きいという、珍・美・大を兼ね備えたカサイテントウの模様を抜き出してデザインしました。日本で似た模様のテントウはおらず、特別感の強い、作者も憧れの種です。",
     descriptionLong: "珍しい、かっこいい、大きいという、珍・美・大を兼ね備えたカサイテントウの模様を抜き出してデザインしました。北海道の一部にしか分布せず、五葉松の仲間につくアブラムシを食べます。日本で似た模様のテントウはおらず、特別感の強い、作者も憧れの種です。",
     imageUrl: [
       "kasaitshirt.png"
@@ -166,7 +167,7 @@ const worksData: Work[] = [
     id: "phone-case-tatesujihimejinngasahamushi",
     title: "タテスジヒメジンガサハムシのスマホケース",
     descriptionShort: "日本で最も美しいカメノコハムシ類とも言える、タテスジヒメジンガサハムシのスマホケースです。クリアケースで翅の透明感を表現しました。",
-    descriptionLong: "https://suzuri.jp/Tentouya/6006661/soft-clear-smartphone-case/iphone12-mini/clear",
+    descriptionLong: "日本で最も美しいカメノコハムシ類とも言える、タテスジヒメジンガサハムシのスマホケースです。クリアケースで翅の透明感を表現しました。",
     imageUrl: [
       "phone_case_tatesujihime.png"
     ],
@@ -179,7 +180,7 @@ const worksData: Work[] = [
     id: "phone-case-tatesujihimejinngasahamushi",
     title: "ポップなテントウムシ スマホケース",
     descriptionShort: "様々なテントウムシをプリントしたポップなスマホケースです。テントウ同士の大きさは、それぞれ実際の比率に近いものになっています。図鑑で種類を調べて楽しむのもおすすめです！",
-    descriptionLong: "https://suzuri.jp/Tentouya/6006972/book-style-smartphone-case/iphone12/white",
+    descriptionLong: "様々なテントウムシをプリントしたポップなスマホケースです。テントウ同士の大きさは、それぞれ実際の比率に近いものになっています。図鑑で種類を調べて楽しむのもおすすめです！",
     imageUrl: [
       "smartphone_case_img.png"
     ],

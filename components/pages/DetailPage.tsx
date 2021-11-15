@@ -1,12 +1,15 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import Image from 'next/image'
 import Title from '../ui/Title'
 import Spacer from '../ui/Spacer'
 import BackNavigation from '../ui/BackNavigation'
 import { Work } from '../../types/Work.type'
 import Button from '../ui/Button'
 import DetailContainer from '../ui/DetailConteiner'
+import OpenInNew from '../icons/OpenInNew'
+import SpacerInline from '../ui/SpacerInline'
+import DetailAdditionalInfo from '../divided/DetailAdditionalInfo'
+import DetailImage from '../ui/DetailImage'
 
 type Props = {
   data: Work
@@ -22,36 +25,23 @@ const WorksPage: React.FC<Props> = (props) => {
         <div css={containerStyle}>
           <Spacer y={10} />
           <Title text={props.data.title} />
-          <Spacer y={20} />
 
-          <div css={imageContainerStyle}>
-            <Image src={`/images/thumbnails/${props.data.imageUrl[0]}`} width={600} height={400} layout="responsive" objectFit="cover" />
-          </div>
+          <DetailImage src={`/images/thumbnails/${props.data.imageUrl[0]}`} />
+          <Spacer y={10} />
 
-          <Button text="購入ページへ" link={props.data.shopLink} />
+          <Button text="購入ページへ" link={props.data.shopLink} >
+            <SpacerInline x={3} />
+            <OpenInNew size={22} />
+          </Button>
 
           <p css={textStyle}>
             {props.data.descriptionLong}
           </p>
 
-          {props.data.imageUrl.map((image, index) => {
-            if (index > 0) {
-              return (
-                <div css={imageContainerStyle}>
-                  <Image src={`/images/thumbnails/${image}`} width={600} height={400} layout="responsive" objectFit="cover" />
-                </div>
-              )
-            }
-          })}
-
-          {props.data.youTubeLink !== "" &&
-            <div css={videoContainerStyle}>
-              <iframe src={props.data.youTubeLink} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} css={videoStyle}
-              />
-            </div>
-          }
+          <DetailAdditionalInfo data={props.data} />
 
         </div>
+        <Spacer y={20} />
       </DetailContainer>
     </div>
   )
@@ -71,28 +61,12 @@ const containerStyle = css`
     padding: 10px;
   }
 `
-const imageContainerStyle = css`
-  width: 100%;
-  height: 75%;
-  margin: 30px 0;
-`
 const textStyle = css`
   font-size: 12pt;
   text-align: left;
   margin: 30px 0;
   padding: 0 10px;
 `
-const videoContainerStyle = css`
-  ${imageContainerStyle}
-  position: relative;
-  padding-bottom: 56.25%;
-`
-const videoStyle = css`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`
+
 
 export default WorksPage
