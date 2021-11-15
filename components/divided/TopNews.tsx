@@ -5,7 +5,7 @@ import { cautionColor } from '../../styles/colors'
 
 const TopNews: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionContainer padding={20}>
       <div css={newsStyle}>
         <p css={textStyle}>
           2021年11月23(火)、大手町インセクトフェアに出展します！

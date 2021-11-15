@@ -13,7 +13,8 @@ const BackNavigation: React.FC<Props> = (props) => {
   return (
     <Link href={props.link}>
       <a css={buttonStyle}>
-        {"< " + props.text}
+        <ArrowBack size={14} />
+        <span css={textStyle}>{props.text}</span>
       </a>
     </Link>
   )
@@ -29,9 +30,14 @@ const buttonStyle = css`
   font-size: 11pt;
   cursor: pointer;
 
+
   &:hover {
     color: ${supportingTextHoverColor};
   }
+`
+
+const textStyle = css`
+  vertical-align: middle;
 `
 
 export default BackNavigation

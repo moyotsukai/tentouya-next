@@ -12,7 +12,7 @@ const TopWorks: React.FC = () => {
   ))
 
   return (
-    <SectionContainer>
+    <SectionContainer padding={20}>
       <Title text="グッズ" />
 
       {pickedUpWorksData.map((data, index) => (

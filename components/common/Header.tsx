@@ -13,7 +13,7 @@ const Header: React.FC = () => {
       <Link href="/">
         <a css={linkStyle}>
           <div css={() => (imageContainer)}>
-            <Image src={logoImg} width={imageSize} height={imageSize} css={imgStyle} />
+            <Image src={logoImg} width={imageSize} height={imageSize} css={() => imgStyle(imageSize)} />
           </div>
           <span css={textStyle}>てんとうや</span>
         </a>
@@ -35,7 +35,6 @@ const linkStyle = css`
   display: inline-block;
 
   &:hover {
-    background-color: #f2f6ff;
     cursor: pointer;
   }
 `
@@ -45,8 +44,8 @@ const imageContainer = (imageSize) => css`
   display: inline-block;
   vertical-align: middle;
 `
-const imgStyle = css`
-  border-radius: 25px;
+const imgStyle = (imageSize) => css`
+  border-radius: ${imageSize / 2}px;
 `
 const textStyle = css`
   font-size: 14pt;

@@ -10,7 +10,7 @@ type Props = {
 
 const WorkCard: React.FC<Props> = (props) => {
   return (
-    <Link href={props.data.detailLink}>
+    <Link href={`/works/${props.data.id}`}>
       <a css={cardStyle}>
         <div css={imageContainerStyle}>
           <Image src={`/images/thumbnails/${props.data.imageUrl[0]}`} width={400} height={400} layout="responsive" objectFit="cover" />
@@ -36,8 +36,9 @@ const cardStyle = css`
   position: relative;
 
   @media (max-width: 700px) {
-    width: 39vw;
-    height: 52vw;
+    width: 45vw;
+    height: 60vw;
+    margin: 2px;
   }
 
   &:hover{

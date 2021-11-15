@@ -13,7 +13,7 @@ type Props = {
 const TopCard: React.FC<Props> = (props) => {
   const worksButtons = (
     <React.Fragment>
-      <RoundOutlineButton isOuterLink={false} text="詳しく" link={props.data.detailLink} />
+      <RoundOutlineButton isOuterLink={false} text="詳しく" link={`/works/${props.data.id}`} />
       <RoundButton isOuterLink={true} text="購入する" link={props.data.shopLink} />
     </React.Fragment>
   )

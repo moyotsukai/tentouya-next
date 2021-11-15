@@ -12,7 +12,7 @@ const WorksPage: React.FC = () => {
     <div css={layoutStyle}>
       <BackNavigation text="トップ" link="/" />
 
-      <SectionContainer>
+      <SectionContainer padding={0}>
         <Title text="グッズ一覧" />
         <Spacer y={10} />
 

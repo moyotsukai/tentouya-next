@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import TopMessage from '../divided/TopMessaeg'
+import TopMessage from '../divided/TopMessage'
 import TopNews from '../divided/TopNews'
 import TopWorks from '../divided/TopWorks'
 import Spacer from '../ui/Spacer'
@@ -22,10 +22,10 @@ const IndexPage: React.FC = () => {
         </React.Fragment>
       }
 
-      <Spacer y={35} />
+      <Spacer y={50} />
       <TopWorks />
 
-      <Spacer y={35} />
+      <Spacer y={50} />
       <TopFukuwarai />
     </div>
   )

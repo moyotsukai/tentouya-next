@@ -7,7 +7,7 @@ import twitterImg from '../../public/images/logo/Twitter_Logo_Blue.png'
 
 const TopMessage: React.FC = () => {
   return (
-    <SectionContainer>
+    <SectionContainer padding={20}>
       <p css={textStyle}>テントウムシを中心に昆虫グッズを作っています。</p>
       <div css={imageContainer}>
         <Image src={twitterImg} width="50" height="50" css={imgStyle} />
