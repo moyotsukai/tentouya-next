@@ -5,15 +5,67 @@ import { PlayingCard } from '../../types/PlayingCard.type'
 type Props = {
   data: PlayingCard
 }
+
+const Mark: React.FC<Props> = (props) => {
+  switch (props.data.mark) {
+    case "spade":
+      return <span>&#9824;</span>
+    case "heart":
+      return <span>&#9829;</span>
+    case "club":
+      return <span>&#9827;</span>
+    case "diamond":
+      return <span>&#9830;</span>
+    default:
+      return <span />
+  }
+}
+
+const ScientificNameItalic: React.FC<Props> = (props) => {
+  if (props.data.scientificNameItalic === "Sticholotis sp.") {
+    return (
+      <React.Fragment>
+        <span css={scientificNameItalicStyle}>Sticholotis</span>&nbsp;<span css={scientificNameUprightStyle}>sp.</span>
+      </React.Fragment>
+    )
+  } else {
+    return (
+      <span css={scientificNameItalicStyle}>{props.data.scientificNameItalic}</span>
+    )
+  }
+}
+
+const ScientificNameUpright: React.FC<Props> = (props) => {
+  if (props.data.scientificNameUpright === "未記載") {
+    return <span>{props.data.scientificNameUpright}</span>
+  } else {
+    return <span css={scientificNameUprightStyle}>{props.data.scientificNameUpright}</span>
+  }
+}
+
+const Rarity: React.FC<Props> = (props) => {
+  const star = "\u2605"
+  let rarity = (
+    star.repeat(props.data.rarity)
+  )
+  if (props.data.name === "トホシテントウ") {
+    rarity += `（関西では${star.repeat(4)}）`
+  }
+
+  return (
+    <span>{rarity}</span>
+  )
+}
+
 const DetailPlayingCardsDescription: React.FC<Props> = (props) => {
   return (
     <div css={textStyle}>
-      <span>{props.data.number}</span>
-      <span>{props.data.mark}</span>
-      <span>{props.data.name}</span>
-      <span>{props.data.scientificNameItalic}</span>
-      <span>{props.data.scientificNameUpright}</span>
-      <span>{props.data.rarity}</span>
+      <span css={numberStyle}>{props.data.number}</span>
+      <Mark data={props.data} />&nbsp;
+      <span>{props.data.name}</span>&nbsp;&nbsp;
+      <ScientificNameItalic data={props.data} />&nbsp;
+      <ScientificNameUpright data={props.data} />&nbsp;&nbsp;
+      <Rarity data={props.data} />
       <p css={descriptionStyle}>{props.data.description}</p>
     </div>
   )
@@ -26,12 +78,23 @@ const textStyle = css`
   padding: 0 10px;
 `
 const descriptionStyle = css`
-  padding-left: 25px;
+  padding-left: 20px;
   margin: 10px 0;
 
   @media (max-width: 480px) {
     padding-left: 12px;
   }
+`
+const numberStyle = css`
+  font-weight: 500;
+`
+const scientificNameItalicStyle = css`
+  font-family: 'Noto Serif';
+  font-style: italic;
+`
+const scientificNameUprightStyle = css`
+  font-family: 'Noto Serif';
+  font-style: normal;
 `
 
 export default DetailPlayingCardsDescription

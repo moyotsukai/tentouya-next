@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
+import Head from 'next/head'
 import Title from '../ui/Title'
 import Spacer from '../ui/Spacer'
 import BackNavigation from '../ui/BackNavigation'
@@ -17,33 +18,42 @@ type Props = {
 
 const WorksPage: React.FC<Props> = (props) => {
   return (
-    <div css={layoutStyle}>
-      <BackNavigation text="グッズ一覧" link="/works" />
-      <Spacer y={10} />
+    <React.Fragment>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
 
-      <DetailContainer padding={20}>
-        <div css={containerStyle}>
-          <Spacer y={10} />
-          <Title text={props.data.title} />
+      <div css={layoutStyle}>
+        <BackNavigation text="グッズ一覧" link="/works" />
+        <Spacer y={10} />
 
-          <DetailImage src={`/images/thumbnails/${props.data.imageUrl[0]}`} />
-          <Spacer y={10} />
+        <DetailContainer padding={20}>
+          <div css={containerStyle}>
+            <Spacer y={10} />
+            <Title text={props.data.title} />
 
-          <Button text="購入ページへ" link={props.data.shopLink} >
-            <SpacerInline x={3} />
-            <OpenInNew size={22} />
-          </Button>
+            <DetailImage src={`/images/thumbnails/${props.data.imageUrl[0]}`} />
+            <Spacer y={10} />
 
-          <p css={textStyle}>
-            {props.data.descriptionLong}
-          </p>
+            <Button text="購入ページへ" link={props.data.shopLink} >
+              <SpacerInline x={3} />
+              <OpenInNew size={22} />
+            </Button>
 
-          <DetailAdditionalInfo data={props.data} />
+            <p css={textStyle}>
+              {props.data.descriptionLong}
+            </p>
 
-        </div>
-        <Spacer y={20} />
-      </DetailContainer>
-    </div>
+            <DetailAdditionalInfo data={props.data} />
+
+          </div>
+          <Spacer y={20} />
+        </DetailContainer>
+      </div>
+    </React.Fragment>
   )
 }
 

@@ -7,7 +7,7 @@ const DetailTentouPlayingCards: React.FC = () => {
   return (
     <React.Fragment>
       <p css={textStyle}>
-        <div css={titleStyle}>テントウトランプ解説</div>
+        <p css={titleStyle}>テントウトランプ解説</p>
         カタカナ表記が和名、アルファベットが学名（イタリック体）と記載者・記載年です。学名とは世界共通の名前です。記載（新種記載）とは、その種が新種であることを論文で示すことです。<br />レア度：&#9733;1～5（多いほど珍しい） 作者の独断と偏見によります。
       </p>
 
