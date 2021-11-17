@@ -11,6 +11,7 @@ import OpenInNew from '../icons/OpenInNew'
 import SpacerInline from '../ui/SpacerInline'
 import DetailAdditionalInfo from '../divided/DetailAdditionalInfo'
 import DetailImage from '../ui/DetailImage'
+import { supportingTextColor } from '../../styles/colors'
 
 type Props = {
   data: Work
@@ -36,16 +37,24 @@ const WorksPage: React.FC<Props> = (props) => {
             <Title text={props.data.title} />
 
             <DetailImage src={`/images/thumbnails/${props.data.imageUrl[0]}`} />
-            <Spacer y={10} />
+
+            <p css={supportingTextStyle}>
+              {props.data.category + " / "}
+              <span css={priceStyle}>{props.data.price}</span>
+            </p>
+
+            <Spacer y={30} />
 
             <Button text="購入ページへ" link={props.data.shopLink} >
               <SpacerInline x={3} />
               <OpenInNew size={22} />
             </Button>
 
+            <Spacer y={30} />
             <p css={textStyle}>
               {props.data.descriptionLong}
             </p>
+            <Spacer y={30} />
 
             <DetailAdditionalInfo data={props.data} />
 
@@ -74,8 +83,17 @@ const containerStyle = css`
 const textStyle = css`
   font-size: 12pt;
   text-align: left;
-  margin: 30px 0;
   padding: 0 10px;
+`
+const supportingTextStyle = css`
+  font-size: 10pt;
+  text-align: left;
+  padding: 0 10px;
+  color: ${supportingTextColor};
+`
+const priceStyle = css`
+  font-size: 11pt;
+  font-weight: 500;
 `
 
 

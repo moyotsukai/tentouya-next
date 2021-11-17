@@ -1,5 +1,4 @@
 import React from 'react'
-import { css } from '@emotion/react'
 import SectionContainer from '../ui/SectionConteiner'
 import Title from '../ui/Title'
 import TopCard from '../ui/TopCard'
@@ -9,6 +8,8 @@ const TopFukuwarai: React.FC = () => {
   const data: Work = {
     id: "tentoufukuwarai",
     title: "テントウ福笑い",
+    price: "",
+    category: "",
     descriptionShort: "Web上で遊べるテントウムシの福笑いを作ってみました。",
     descriptionLong: "バラバラになった模様を元の位置に戻してテントウムシを完成させよう！",
     imageUrl: [

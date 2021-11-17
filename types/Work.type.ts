@@ -1,6 +1,8 @@
 export type Work = {
   id: string,
   title: string,
+  price: string,
+  category: string,
   descriptionShort: string,
   descriptionLong: string,
   imageUrl: string[],

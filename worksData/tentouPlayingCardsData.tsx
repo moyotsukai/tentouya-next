@@ -152,7 +152,7 @@ const tentouPlayingCardsData: PlayingCard[] = [
     scientificNameItalic: "Medamatento ocularis",
     scientificNameUpright: "(Sasaji, 1988)",
     rarity: 5,
-    description: "沖縄本島にのみ分布する、体長1mmちょっとの非常に小さい種です。名前の通りの大きな眼と、テントウムシらしからぬ楕円形で平たい体形が特徴です。前側の2対の紋は見えづらくなることも多く、2♧のミヤタケメダマテントウとの区別が難しいこともあります。"
+    description: "沖縄本島にのみ分布する、体長1mmちょっとの非常に小さい種です。名前の通りの大きな眼と、テントウムシらしからぬ楕円形で平たい体形が特徴です。前側の2対の紋は見えづらくなることも多く、2\u2663のミヤタケメダマテントウとの区別が難しいこともあります。"
   },
   {
     number: "5",
