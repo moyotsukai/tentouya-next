@@ -12,12 +12,15 @@ import SpacerInline from '../ui/SpacerInline'
 import DetailAdditionalInfo from '../divided/DetailAdditionalInfo'
 import DetailImage from '../ui/DetailImage'
 import { supportingTextColor } from '../../styles/colors'
+import { breakedText } from '../../utils/breakedText'
 
 type Props = {
   data: Work
 }
 
 const WorksPage: React.FC<Props> = (props) => {
+  const description = breakedText(props.data.descriptionLong)
+
   return (
     <React.Fragment>
       <Head>
@@ -52,7 +55,7 @@ const WorksPage: React.FC<Props> = (props) => {
 
             <Spacer y={30} />
             <p css={textStyle}>
-              {props.data.descriptionLong}
+              {description}
             </p>
             <Spacer y={30} />
 
