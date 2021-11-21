@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   return (
     <header css={headerStyle}>
-      <Link href="/">
+      <Link href="/" passHref>
         <a css={linkStyle}>
           <div css={() => (imageContainer)}>
             <Image src={logoImg} width={imageSize} height={imageSize} css={() => imgStyle(imageSize)} />

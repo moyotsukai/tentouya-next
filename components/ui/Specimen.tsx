@@ -10,11 +10,11 @@ type Props = {
 
 const Specimen: React.FC<Props> = (props) => {
   return (
-    <Link href={`/tentoufukuwarai/${props.data.id}`}>
+    <Link href={`/tentoufukuwarai/${props.data.id}`} passHref>
       <a css={cardStyle}>
 
         <div css={backgroundImageContainerStyle}>
-          <Image src="/images/fukuwarai/specimen_label.png" width={380} height={206} layout="responsive" objectFit="cover" />
+          <Image src="/images/fukuwarai/specimen_label.png" width={380} height={190} layout="responsive" objectFit="cover" />
 
           <div css={imageContainerStyle}>
             <Image src={`/images/fukuwarai/${props.data.id}/${props.data.imageUrls.top}`} width={300} height={300} layout="responsive" objectFit="cover" />
@@ -35,7 +35,7 @@ const cardStyle = css`
   height: 190px;
   border-radius: 6px;
   overflow: hidden;
-  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.05));
   text-align: center;
   position: relative;
 

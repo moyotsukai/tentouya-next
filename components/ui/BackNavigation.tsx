@@ -11,7 +11,7 @@ type Props = {
 
 const BackNavigation: React.FC<Props> = (props) => {
   return (
-    <Link href={props.link}>
+    <Link href={props.link} passHref>
       <a css={buttonStyle}>
         <ArrowBack size={14} />
         <span css={textStyle}>{props.text}</span>

@@ -19,7 +19,7 @@ const RoundOutlineButton: React.FC<Props> = (props) => {
 
   } else {
     return (
-      <Link href={props.link}>
+      <Link href={props.link} passHref>
         <a css={buttonStyle}>
           {props.text}
         </a>
