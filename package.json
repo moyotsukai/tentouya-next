@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@types/react": "^17.0.34",
+    "microcms-js-sdk": "^2.0.0",
     "next": "12.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",

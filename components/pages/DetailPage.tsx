@@ -1,10 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import Head from 'next/head'
 import Title from '../ui/Title'
 import Spacer from '../ui/Spacer'
 import BackNavigation from '../ui/BackNavigation'
-import { Work } from '../../types/Work.type'
 import Button from '../ui/Button'
 import DetailContainer from '../ui/DetailConteiner'
 import OpenInNew from '../icons/OpenInNew'
@@ -13,59 +11,51 @@ import DetailAdditionalInfo from '../divided/DetailAdditionalInfo'
 import DetailImage from '../ui/DetailImage'
 import { supportingTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
+import { WorkData } from '../../types/WorkData.type'
 
 type Props = {
-  data: Work
+  data: WorkData
 }
 
 const WorksPage: React.FC<Props> = (props) => {
   const description = breakedText(props.data.descriptionLong)
 
   return (
-    <React.Fragment>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+    <div css={layoutStyle}>
+      <BackNavigation text="グッズ一覧" link="/works" />
+      <Spacer y={10} />
 
-      <div css={layoutStyle}>
-        <BackNavigation text="グッズ一覧" link="/works" />
-        <Spacer y={10} />
+      <DetailContainer padding={20}>
+        <div css={containerStyle}>
+          <Spacer y={10} />
+          <Title text={props.data.title} />
 
-        <DetailContainer padding={20}>
-          <div css={containerStyle}>
-            <Spacer y={10} />
-            <Title text={props.data.title} />
+          <DetailImage src={props.data.imageUrlA.url} />
 
-            <DetailImage src={`/images/thumbnails/${props.data.imageUrl[0]}`} />
+          <p css={supportingTextStyle}>
+            {props.data.category + " / "}
+            <span css={priceStyle}>{props.data.price}</span>
+          </p>
 
-            <p css={supportingTextStyle}>
-              {props.data.category + " / "}
-              <span css={priceStyle}>{props.data.price}</span>
-            </p>
+          <Spacer y={30} />
 
-            <Spacer y={30} />
+          <Button text="購入ページへ" link={props.data.shopLink} >
+            <SpacerInline x={3} />
+            <OpenInNew size={22} />
+          </Button>
 
-            <Button text="購入ページへ" link={props.data.shopLink} >
-              <SpacerInline x={3} />
-              <OpenInNew size={22} />
-            </Button>
+          <Spacer y={30} />
+          <p css={textStyle}>
+            {description}
+          </p>
+          <Spacer y={30} />
 
-            <Spacer y={30} />
-            <p css={textStyle}>
-              {description}
-            </p>
-            <Spacer y={30} />
+          <DetailAdditionalInfo data={props.data} />
 
-            <DetailAdditionalInfo data={props.data} />
-
-          </div>
-          <Spacer y={20} />
-        </DetailContainer>
-      </div>
-    </React.Fragment>
+        </div>
+        <Spacer y={20} />
+      </DetailContainer>
+    </div>
   )
 }
 

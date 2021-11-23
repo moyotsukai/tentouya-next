@@ -1,39 +1,34 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { Work } from '../../types/Work.type'
 import DetailImage from '../ui/DetailImage'
 import DetailTentouPlayingCards from './DetailTentouPlayingCards'
+import { WorkData } from '../../types/WorkData.type'
 
 type Props = {
-  data: Work
+  data: WorkData
 }
 
 const DetailAdditionalInfo: React.FC<Props> = (props) => {
   return (
     <React.Fragment>
-      {props.data.imageUrl.map((image, index) => {
-        if (index >= 1 && index < 3) {
-          return (
-            <DetailImage src={`/images/thumbnails/${image}`} key={index} />
-          )
-        }
-      })}
+      {props.data.imageUrlB &&
+        <DetailImage src={props.data.imageUrlB.url} />
+      }
+      {props.data.imageUrlC &&
+        <DetailImage src={props.data.imageUrlC.url} />
+      }
 
-      {props.data.id === "tentou-playing-cards" &&
+      {props.data.workId === "tentou-playing-cards" &&
         <DetailTentouPlayingCards />
       }
 
-      {props.data.imageUrl.map((image, index) => {
-        if (index >= 3) {
-          return (
-            <DetailImage src={`/images/thumbnails/${image}`} key={index} />
-          )
-        }
-      })}
+      {props.data.imageUrlD &&
+        <DetailImage src={props.data.imageUrlD.url} />
+      }
 
-      {props.data.youTubeLink !== "" &&
+      {props.data.youtubeLink &&
         <div css={videoContainerStyle}>
-          <iframe src={props.data.youTubeLink} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} css={videoStyle} />
+          <iframe src={props.data.youtubeLink} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} css={videoStyle} />
         </div>
       }
     </React.Fragment>

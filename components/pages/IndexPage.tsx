@@ -5,8 +5,13 @@ import TopNews from '../divided/TopNews'
 import TopWorks from '../divided/TopWorks'
 import Spacer from '../ui/Spacer'
 import TopFukuwarai from '../divided/TopFukuwarai'
+import { WorkData } from '../../types/WorkData.type'
 
-const IndexPage: React.FC = () => {
+type Props = {
+  worksData: WorkData[]
+}
+
+const IndexPage: React.FC<Props> = (props) => {
   const hasNews = true
 
   return (
@@ -23,7 +28,7 @@ const IndexPage: React.FC = () => {
       }
 
       <Spacer y={50} />
-      <TopWorks />
+      <TopWorks worksData={props.worksData} />
 
       <Spacer y={50} />
       <TopFukuwarai />

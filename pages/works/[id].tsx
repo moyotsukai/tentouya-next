@@ -1,32 +1,34 @@
 import DetailPage from '../../components/pages/DetailPage'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { worksData } from '../../worksData/works'
-import { Work } from '../../types/Work.type'
+import { client } from '../../libs/client'
+import { WorkData } from '../../types/WorkData.type'
 
 type Props = {
-  data: Work
+  workData: WorkData
 }
 
-const Detail: React.FC<Props> = ({ data }) => {
+const Detail: React.FC<Props> = (props) => {
   return (
-    <DetailPage data={data} />
+    <DetailPage data={props.workData} />
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = worksData.map((data) => (
-    { params: { id: data.id } }
+  const data = await client.get({ endpoint: "works", queries: { limit: 1000 } })
+  const paths = data.contents.map((item: WorkData) => (
+    { params: { id: item.workId } }
   ))
 
   return { paths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const data = worksData.find((data) => (
-    data.id === params.id
+  const data = await client.get({ endpoint: "works", queries: { limit: 1000 } })
+  const workData = data.contents.find((item: WorkData) => (
+    item.workId === params.id
   ))
 
-  return { props: { data } }
+  return { props: { workData } }
 }
 
 export default Detail

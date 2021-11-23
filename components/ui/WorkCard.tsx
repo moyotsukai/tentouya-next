@@ -1,19 +1,19 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { Work } from '../../types/Work.type'
 import Image from 'next/image'
 import Link from 'next/link'
+import { WorkData } from '../../types/WorkData.type'
 
 type Props = {
-  data: Work
+  data: WorkData
 }
 
 const WorkCard: React.FC<Props> = (props) => {
   return (
-    <Link href={`/works/${props.data.id}`}>
+    <Link href={`/works/${props.data.workId}`}>
       <a css={cardStyle}>
         <div css={imageContainerStyle}>
-          <Image src={`/images/thumbnails/${props.data.imageUrl[0]}`} width={400} height={400} layout="responsive" objectFit="cover" />
+          <Image src={props.data.imageUrlA.url} width={400} height={400} layout="responsive" objectFit="cover" />
         </div>
         <p css={titleStyle}>{props.data.title}</p>
         <div css={coverStyle} />

@@ -3,11 +3,15 @@ import { css } from '@emotion/react'
 import Title from '../ui/Title'
 import Spacer from '../ui/Spacer'
 import BackNavigation from '../ui/BackNavigation'
-import { worksData } from '../../worksData/works'
 import WorkCard from '../ui/WorkCard'
 import SectionContainer from '../ui/SectionConteiner'
+import { WorkData } from '../../types/WorkData.type'
 
-const WorksPage: React.FC = () => {
+type Props = {
+  worksData: WorkData[]
+}
+
+const WorksPage: React.FC<Props> = (props) => {
   return (
     <div css={layoutStyle}>
       <BackNavigation text="トップ" link="/" />
@@ -17,7 +21,7 @@ const WorksPage: React.FC = () => {
         <Spacer y={10} />
 
         <div css={cardContainerStyle}>
-          {worksData.map((data, index) => (
+          {props.worksData.map((data, index) => (
             <WorkCard data={data} key={index} />
           ))}
         </div>

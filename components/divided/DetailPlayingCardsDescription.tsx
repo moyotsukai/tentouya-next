@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { PlayingCard } from '../../types/PlayingCard.type'
+import Head from 'next/head'
 
 type Props = {
   data: PlayingCard
@@ -59,15 +60,20 @@ const Rarity: React.FC<Props> = (props) => {
 
 const DetailPlayingCardsDescription: React.FC<Props> = (props) => {
   return (
-    <div css={textStyle}>
-      <span css={numberStyle}>{props.data.number}</span>
-      <Mark data={props.data} />&nbsp;
-      <span>{props.data.name}</span>&nbsp;&nbsp;
-      <ScientificNameItalic data={props.data} />&nbsp;
-      <ScientificNameUpright data={props.data} />&nbsp;&nbsp;
-      <Rarity data={props.data} />
-      <p css={descriptionStyle}>{props.data.description}</p>
-    </div>
+    <React.Fragment>
+      <Head>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet" key="fontLink" />
+      </Head>
+      <div css={textStyle}>
+        <span css={numberStyle}>{props.data.number}</span>
+        <Mark data={props.data} />&nbsp;
+        <span>{props.data.name}</span>&nbsp;&nbsp;
+        <ScientificNameItalic data={props.data} />&nbsp;
+        <ScientificNameUpright data={props.data} />&nbsp;&nbsp;
+        <Rarity data={props.data} />
+        <p css={descriptionStyle}>{props.data.description}</p>
+      </div>
+    </React.Fragment>
   )
 }
 

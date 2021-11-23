@@ -1,19 +1,19 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { Work } from '../../types/Work.type'
 import Image from 'next/image'
 import RoundOutlineButton from '../ui/RoundOutlineButton'
 import RoundButton from '../ui/RoundButton'
+import { WorkData } from '../../types/WorkData.type'
 
 type Props = {
-  data: Work,
+  data: WorkData,
   isWorksStyle: boolean
 }
 
 const TopCard: React.FC<Props> = (props) => {
   const worksButtons = (
     <React.Fragment>
-      <RoundOutlineButton isOuterLink={false} text="詳しく" link={`/works/${props.data.id}`} />
+      <RoundOutlineButton isOuterLink={false} text="詳しく" link={`/works/${props.data.workId}`} />
       <RoundButton isOuterLink={true} text="購入する" link={props.data.shopLink} />
     </React.Fragment>
   )
@@ -27,7 +27,7 @@ const TopCard: React.FC<Props> = (props) => {
   return (
     <div css={cardStyle}>
       <div css={imageContainerStyle}>
-        <Image src={`/images/thumbnails/${props.data.imageUrl[0]}`} width={600} height={400} layout="responsive" objectFit="cover" />
+        <Image src={props.data.imageUrlA.url} width={600} height={400} layout="responsive" objectFit="cover" />
       </div>
       <div css={textBoxStyle}>
         <p css={titleStyle}>{props.data.title}</p>

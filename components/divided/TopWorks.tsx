@@ -1,13 +1,17 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { worksData } from '../../worksData/works'
 import SectionContainer from '../ui/SectionConteiner'
 import RoundOutlineButton from '../ui/RoundOutlineButton'
 import Title from '../ui/Title'
 import TopCard from '../ui/TopCard'
+import { WorkData } from '../../types/WorkData.type'
 
-const TopWorks: React.FC = () => {
-  const pickedUpWorksData = worksData.filter((data) => (
+type Props = {
+  worksData: WorkData[]
+}
+
+const TopWorks: React.FC<Props> = (props) => {
+  const pickedUpWorksData = props.worksData.filter((data) => (
     data.isPickedUp === true
   ))
 
@@ -23,5 +27,7 @@ const TopWorks: React.FC = () => {
     </SectionContainer>
   )
 }
+
+
 
 export default TopWorks
