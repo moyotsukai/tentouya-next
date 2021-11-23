@@ -8,7 +8,7 @@ import { OgpData } from '../types/ogpData.type'
 
 type Props = {
   worksData: WorkData[],
-  ogpData: OgpData,
+  ogpData: OgpData
 }
 
 const Index: React.FC<Props> = (props) => {
