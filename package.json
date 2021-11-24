@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.16.0",
     "@emotion/react": "^11.5.0",
     "@types/react": "^17.0.34",
     "microcms-js-sdk": "^2.0.0",

@@ -12,7 +12,7 @@ type Props = {
 }
 
 const IndexPage: React.FC<Props> = (props) => {
-  const hasNews = true
+  const hasNews = false
 
   return (
     <div css={layoutStyle}>
