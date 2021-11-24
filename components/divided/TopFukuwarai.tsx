@@ -13,7 +13,9 @@ const TopFukuwarai: React.FC = () => {
     descriptionShort: "Web上で遊べるテントウムシの福笑いを作ってみました。",
     descriptionLong: "バラバラになった模様を元の位置に戻してテントウムシを完成させよう！",
     shopLink: "/tentoufukuwarai",
-    ogImage: "",
+    ogImage: {
+      url: ""
+    },
     isPickedUp: true,
     imageUrlA: {
       url: "/images/thumbnails/fukuwarai_thumbnail.jpg"
