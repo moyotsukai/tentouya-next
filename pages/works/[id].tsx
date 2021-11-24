@@ -1,7 +1,9 @@
+import React from 'react'
 import DetailPage from '../../components/pages/DetailPage'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { client } from '../../libs/client'
 import { WorkData } from '../../types/WorkData.type'
+import Meta from '../../components/common/Meta'
 
 type Props = {
   workData: WorkData
@@ -9,7 +11,10 @@ type Props = {
 
 const Detail: React.FC<Props> = (props) => {
   return (
-    <DetailPage data={props.workData} />
+    <React.Fragment>
+      <Meta title={`${props.workData.title} - てんとうや`} imageUrl={props.workData.ogImage.url} />
+      <DetailPage data={props.workData} />
+    </React.Fragment>
   )
 }
 

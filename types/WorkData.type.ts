@@ -7,7 +7,9 @@ export type WorkData = {
   descriptionLong: string,
   shopLink: string,
   youtubeLink?: string,
-  ogImage: string,
+  ogImage: {
+    url: string
+  },
   isPickedUp: boolean,
   imageUrlA: {
     url: string
