@@ -61,9 +61,6 @@ const Rarity: React.FC<Props> = (props) => {
 const DetailPlayingCardsDescription: React.FC<Props> = (props) => {
   return (
     <React.Fragment>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet" key="fontLink" />
-      </Head>
       <div css={textStyle}>
         <span css={numberStyle}>{props.data.number}</span>
         <Mark data={props.data} />&nbsp;

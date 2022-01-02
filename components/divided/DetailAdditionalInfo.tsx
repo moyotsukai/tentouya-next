@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import DetailImage from '../ui/DetailImage'
 import DetailTentouPlayingCards from './DetailTentouPlayingCards'
 import { WorkData } from '../../types/WorkData.type'
+import DetailTentouDice from './DetailTentouDice'
 
 type Props = {
   data: WorkData
@@ -20,6 +21,10 @@ const DetailAdditionalInfo: React.FC<Props> = (props) => {
 
       {props.data.workId === "tentou-playing-cards" &&
         <DetailTentouPlayingCards />
+      }
+
+      {props.data.workId === "tentou-dice" &&
+        <DetailTentouDice />
       }
 
       {props.data.imageUrlD &&

@@ -12,7 +12,7 @@ const TopMessage: React.FC = () => {
       <div css={imageContainer}>
         <Image src={twitterImg} width="50" height="50" css={imgStyle} />
       </div>
-      <RoundButton isOuterLink={true} text="@tentouya64をフォロー" link="https://twitter.com/tentouya64?lang=ja" />
+      <RoundButton isOuterLink={true} text="@tentouya64をフォロー" link="https://twitter.com/tentouya64" />
     </SectionContainer>
   )
 }
