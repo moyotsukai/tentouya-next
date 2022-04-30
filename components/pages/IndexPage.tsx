@@ -17,6 +17,7 @@ const IndexPage: React.FC<Props> = (props) => {
   return (
     <div css={layoutStyle}>
       <Spacer y={30} />
+
       <TopMessage />
       <Spacer y={1} />
 
@@ -26,11 +27,11 @@ const IndexPage: React.FC<Props> = (props) => {
           < TopNews />
         </React.Fragment>
       }
-
       <Spacer y={50} />
+
       <TopWorks worksData={props.worksData} />
+      <Spacer y={90} />
 
-      <Spacer y={50} />
       <TopFukuwarai />
     </div>
   )
