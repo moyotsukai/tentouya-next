@@ -36,6 +36,21 @@ const worksData: Work[] = [
     isPickedUp: true
   },
   {
+    id: "oosenchikogane-papercraft",
+    title: "オオセンチコガネのペーパークラフト",
+    price: "¥ 500",
+    category: "ペーパークラフト",
+    descriptionShort: "オオセンチコガネのペーパークラフトです。ぜひ紙で立体作品を作る楽しさを見つけてみてください！",
+    descriptionLong: "オオセンチコガネのペーパークラフトです。曲線に沿って折ることで立体感を表現しています。\n\n生息地域によって体色にバリエーションのあるオオセンチコガネですが、ペーパークラフトでも赤、青、緑の３色用意しました。色ごとにそれぞれ別に購入が必要となりますのでご注意ください。\n\nご購入いただくと、PDFファイルの展開図がダウンロードできます。ぜひ紙で立体作品を作る楽しさを見つけてみてください！",
+    imageUrl: [
+
+    ],
+    shopLink: "",
+    youTubeLink: "https://www.youtube.com/embed/FqgjbrqwGc8",
+    ogpUrl: "",
+    isPickedUp: true
+  },
+  {
     id: "maimaikaburi-papercraft",
     title: "マイマイカブリのペーパークラフト",
     price: "¥ 500",
@@ -49,7 +64,7 @@ const worksData: Work[] = [
     shopLink: "https://tentouya.base.shop/items/51778458",
     youTubeLink: "https://www.youtube.com/embed/1m7rtRYI7YI",
     ogpUrl: "",
-    isPickedUp: true
+    isPickedUp: false
   },
   {
     id: "kamenokotentou-papercraft",
