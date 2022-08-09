@@ -22,5 +22,11 @@ export type WorkData = {
   },
   imageUrlD?: {
     url: string
+  },
+  shopLinks?: {
+    shopLink: {
+      shopLink: string,
+      title: string
+    }[]
   }
 }

@@ -39,10 +39,22 @@ const WorksPage: React.FC<Props> = (props) => {
 
           <Spacer y={30} />
 
-          <Button text="購入ページへ" link={props.data.shopLink} >
-            <SpacerInline x={3} />
-            <OpenInNew size={22} />
-          </Button>
+          {props.data.shopLinks
+            ?
+            props.data.shopLinks.shopLink.map((link, index) => (
+              <div key={index} css={buttonContainerStyle}>
+                <Button text={`購入する（${link.title}）`} link={link.shopLink}>
+                  <SpacerInline x={3} />
+                  <OpenInNew size={22} />
+                </Button>
+              </div>
+            ))
+            :
+            <Button text="購入ページへ" link={props.data.shopLink} >
+              <SpacerInline x={3} />
+              <OpenInNew size={22} />
+            </Button>
+          }
 
           <Spacer y={30} />
           <p css={textStyle}>
@@ -89,5 +101,8 @@ const priceStyle = css`
   font-weight: 500;
 `
 
+const buttonContainerStyle = css`
+  display: block;
+`
 
 export default WorksPage
