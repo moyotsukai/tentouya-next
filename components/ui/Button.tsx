@@ -1,36 +1,38 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { primaryColor, primarySelectedColor } from '../../styles/colors'
+import { primaryColor, primaryDisabledColor, primarySelectedColor } from '../../styles/colors'
 
 type Props = {
   text: string,
-  link: string,
+  onClick: () => void,
+  isEnabeld: boolean,
   children?: React.ReactNode
 }
 
 const Button: React.FC<Props> = (props) => {
   return (
-    <a href={props.link} target="_blank" rel="noopener noreferrer" css={buttonStyle}>
+    <button onClick={props.onClick} disabled={!props.isEnabeld} css={() => buttonStyle(props.isEnabeld)}>
       {props.text}
       {props.children}
-    </a>
+    </button>
   )
 }
 
-const buttonStyle = css`
+const buttonStyle = (isEnabled: boolean) => css`
   display: inline-block;
+  border: none;
   margin: 5px 10px;
   padding: 10px 16px;
   border-radius: 6px;
   text-align: center;
-  background-color: ${primaryColor};
+  background-color: ${isEnabled ? primaryColor : primaryDisabledColor};
   color: #fff;
-  font-size: 11pt;
-  cursor: pointer;
+  font-size: 15px;
+  cursor: ${isEnabled ? "pointer" : "default"};
   vertical-align: middle;
 
   &:hover {
-    background-color: ${primarySelectedColor};
+    background-color: ${isEnabled ? primarySelectedColor : primaryDisabledColor};
   }
 `
 

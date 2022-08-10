@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import Title from '../ui/Title'
 import Spacer from '../ui/Spacer'
@@ -12,6 +12,7 @@ import DetailImage from '../ui/DetailImage'
 import { supportingTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
 import { WorkData } from '../../types/WorkData.type'
+import Select from '../ui/Select'
 
 type Props = {
   data: WorkData
@@ -19,6 +20,14 @@ type Props = {
 
 const WorksPage: React.FC<Props> = (props) => {
   const description = breakedText(props.data.descriptionLong)
+  const options = props.data.shopLinks?.shopLink.map((link) => (link.title))
+  const [selectedOption, setSelectedOption] = useState<string>("")
+  const selectedOptionLink = props.data.shopLinks?.shopLink.find((link) => (link.title == selectedOption))
+  const imageUrl = selectedOptionLink?.imageUrl?.url ?? props.data.imageUrlA.url
+
+  const onClickButton = (link: string) => {
+    window.open(link, "_blank")
+  }
 
   return (
     <div css={layoutStyle}>
@@ -30,7 +39,7 @@ const WorksPage: React.FC<Props> = (props) => {
           <Spacer y={10} />
           <Title text={props.data.title} />
 
-          <DetailImage src={props.data.imageUrlA.url} />
+          <DetailImage src={imageUrl} />
 
           <p css={supportingTextStyle}>
             {props.data.category + " / "}
@@ -41,16 +50,17 @@ const WorksPage: React.FC<Props> = (props) => {
 
           {props.data.shopLinks
             ?
-            props.data.shopLinks.shopLink.map((link, index) => (
-              <div key={index} css={buttonContainerStyle}>
-                <Button text={`購入する（${link.title}）`} link={link.shopLink}>
-                  <SpacerInline x={3} />
-                  <OpenInNew size={22} />
-                </Button>
+            <div>
+              <div css={selectContainerStyle}>
+                <Select placeholder={props.data.shopLinks.placeholder} options={options} selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
               </div>
-            ))
+              <Button text="購入ページへ" onClick={() => onClickButton(selectedOptionLink.shopLink)} isEnabeld={selectedOption !== ""} >
+                <SpacerInline x={3} />
+                <OpenInNew size={22} />
+              </Button>
+            </div>
             :
-            <Button text="購入ページへ" link={props.data.shopLink} >
+            <Button text="購入ページへ" onClick={() => onClickButton(props.data.shopLink)} isEnabeld={true} >
               <SpacerInline x={3} />
               <OpenInNew size={22} />
             </Button>
@@ -100,8 +110,7 @@ const priceStyle = css`
   font-size: 11pt;
   font-weight: 500;
 `
-
-const buttonContainerStyle = css`
+const selectContainerStyle = css`
   display: block;
 `
 
