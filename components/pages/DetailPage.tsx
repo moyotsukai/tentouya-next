@@ -29,6 +29,13 @@ const WorksPage: React.FC<Props> = (props) => {
     window.open(link, "_blank")
   }
 
+  const hasOptions = (data: WorkData) => {
+    if (data.shopLinks?.shopLink) {
+      return data.shopLinks.shopLink.length > 0
+    }
+    return false
+  }
+
   return (
     <div css={layoutStyle}>
       <BackNavigation text="グッズ一覧" link="/works" />
@@ -48,7 +55,7 @@ const WorksPage: React.FC<Props> = (props) => {
 
           <Spacer y={30} />
 
-          {props.data.shopLinks
+          {hasOptions(props.data)
             ?
             <div>
               <div css={selectContainerStyle}>

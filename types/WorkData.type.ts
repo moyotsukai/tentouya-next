@@ -24,13 +24,13 @@ export type WorkData = {
     url: string
   },
   shopLinks?: {
-    placeholder: string,
-    shopLink: {
+    placeholder?: string,
+    shopLink?: {
       title: string,
       shopLink: string,
       imageUrl: {
         url: string
       }
     }[]
-  }
+  } | null
 }
