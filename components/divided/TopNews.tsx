@@ -2,13 +2,18 @@ import React from 'react'
 import { css } from '@emotion/react'
 import SectionContainer from '../ui/SectionConteiner'
 import { cautionColor } from '../../styles/colors'
+import TextLink from '../ui/TextLink'
 
 const TopNews: React.FC = () => {
   return (
     <SectionContainer padding={20}>
       <div css={newsStyle}>
         <p css={textStyle}>
-          2021年11月23(火)、大手町インセクトフェアに出展します！
+          2022年10月1(土) 2(日)、
+          <TextLink href="https://www.hakubutufes.info/">
+            博物ふぇすてぃばる！
+          </TextLink>
+          に出展します！
         </p>
       </div>
     </SectionContainer>
